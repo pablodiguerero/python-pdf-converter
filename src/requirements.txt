@@ -1,0 +1,4 @@
+fastapi==0.63.0
+functions==0.7.0
+pyppeteer==0.2.5
+uvicorn==0.13.4

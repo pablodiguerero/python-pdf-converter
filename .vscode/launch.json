@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "[CMD] Run make migrations",
+      "type": "python",
+      "envFile": "${workspaceFolder}/.env",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/manage.py",
+      "args": ["makemigrations"],
+      "django": true
+    }
+  ]
+}
