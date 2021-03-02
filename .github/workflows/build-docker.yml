@@ -15,5 +15,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.CI_TOKEN }}
           registry: docker.pkg.github.com
-          repository: pablodiguerero/golang-image-handler/image-handler
+          repository: pablodiguerero/python-pdf-converter/app
           tag_with_ref: true
