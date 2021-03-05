@@ -1,4 +1,5 @@
 from typing import List
+from asyncio import sleep
 
 from pyppeteer import launch
 
@@ -16,6 +17,10 @@ async def get_files(tasks: List[ChromeTask]) -> List[ChromeResults]:
 
         try:
             await page.goto(task.url)
+
+            if task.delay:
+                await sleep(task.delay)
+
         except Exception as e:
             logger.exception(f"Got exception on page {task.url}")
             continue
