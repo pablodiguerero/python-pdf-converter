@@ -16,7 +16,7 @@ async def get_files(tasks: List[ChromeTask]) -> List[ChromeResults]:
         logger.info(f"Get page {task.url}")
 
         try:
-            await page.goto(task.url)
+            await page.goto(task.url, timeout=15000, waitUntil="networkidle0")
 
             if task.delay:
                 await sleep(task.delay)

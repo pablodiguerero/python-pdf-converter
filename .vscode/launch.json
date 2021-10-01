@@ -2,13 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "[CMD] Run make migrations",
+      "name": "Run dev server",
       "type": "python",
-      "envFile": "${workspaceFolder}/.env",
       "request": "launch",
-      "program": "${workspaceFolder}/src/manage.py",
-      "args": ["makemigrations"],
-      "django": true
+      "envFile": "${workspaceFolder}/.env",
+      "cwd": "${workspaceFolder}/src",
+      "module": "uvicorn",
+      "args": ["--port=8000", "--reload", "--ws=none", "--limit-concurrency=5", "main:app"]
     }
   ]
 }
